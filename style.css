@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&family=Big+Shoulders+Display:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  padding: 50px 20px;
+}
+
+.main-container {
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: [r1] 1fr [r2] 1fr [r3] 1fr [r4];
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "one"
+    "two"
+    "three";
+}
+
+.one {
+  background-color: hsl(31, 77%, 52%);
+  grid-area: one;
+}
+
+.two {
+  background-color: hsl(184, 100%, 22%);
+  grid-area: two;
+}
+
+.three {
+  background-color: hsl(179, 100%, 13%);
+  grid-area: three;
+}
+
+.item {
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item img {
+  width: 20%;
+}
+
+h1 {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  margin: 20px 0px;
+}
+
+p {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 22px;
+  opacity: 75%;
+  margin-bottom: 40px;
+}
+
+button {
+  border: none;
+  height: 30px;
+  border-radius: 15px;
+  width: 60%;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.one button {
+  color: hsl(31, 77%, 52%);
+}
+
+.two button {
+  color: hsl(184, 100%, 22%);
+}
+
+.three button {
+  color: hsl(179, 100%, 13%);
+}
+
+button:hover {
+  color: white;
+  border: 1.5px solid white;
+}
+
+.one button:hover {
+  background-color: hsl(31, 77%, 52%);
+}
+
+.two button:hover {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.three button:hover {
+  background-color: hsl(179, 100%, 13%);
+}
+
+@media (min-width: 576px) {
+  .main-container {
+    max-width: 800px;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "one two three";
+  }
+}
